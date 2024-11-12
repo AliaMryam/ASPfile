@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Art Gallery & Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>My Art Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About the Artist</h2>
+            <p>Welcome to my art gallery. I create original paintings that capture the beauty of the world around us. Feel free to explore my gallery and shop my artwork!</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <!-- Painting 1 -->
+                <div class="gallery-item">
+                    <img src="painting1.jpg" alt="Painting 1">
+                    <p>Title: Sunrise in the Mountains</p>
+                    <p>Price: $200</p>
+                    <button class="buy-btn" onclick="addToCart('Sunrise in the Mountains', 200)">Buy Now</button>
+                </div>
+                <!-- Painting 2 -->
+                <div class="gallery-item">
+                    <img src="painting2.jpg" alt="Painting 2">
+                    <p>Title: Tranquil Lake</p>
+                    <p>Price: $150</p>
+                    <button class="buy-btn" onclick="addToCart('Tranquil Lake', 150)">Buy Now</button>
+                </div>
+                <!-- Painting 3 -->
+                <div class="gallery-item">
+                    <img src="painting3.jpg" alt="Painting 3">
+                    <p>Title: Sunset Over the Ocean</p>
+                    <p>Price: $180</p>
+                    <button class="buy-btn" onclick="addToCart('Sunset Over the Ocean', 180)">Buy Now</button>
+                </div>
+                <!-- Add more paintings as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart">
+        <div class="container">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p>Your cart is empty.</p>
+            </div>
+            <button id="checkout-btn" onclick="checkout()" style="display: none;">Checkout</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to inquire about purchasing a painting or just want to get in touch, feel free to reach out.</p>
+            <ul>
+                <li>Email: <a href="mailto:artist@example.com">artist@example.com</a></li>
+                <li>Phone: +123 456 7890</li>
+                <li>Instagram: <a href="https://instagram.com/yourprofile" target="_blank">@yourprofile</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
