@@ -1,0 +1,132 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and font settings */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for centered content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Gallery Section */
+#gallery {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-btn:hover {
+    background-color: #555;
+}
+
+/* Cart Section */
+#cart {
+    background-color: #fff;
+    padding: 40px 0;
+    display: none;
+}
+
+#cart-items p {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
