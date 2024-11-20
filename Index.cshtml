@@ -1,31 +1,31 @@
-﻿@{
-    ViewData["Title"] = "Upload Your Painting";
-}
+﻿@model IEnumerable<HospitalManagementSystem.Models.Patient>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/styles.css">
-</head>
-<body>
-    <div class="upload-container">
-        <h1>@ViewData["Title"]</h1>
-        <form action="/Home/Upload" method="POST" enctype="multipart/form-data">
-            <label for="painting">Choose a painting (image):</label>
-            <input type="file" name="painting" id="painting" accept="image/*" required><br><br>
+<h2>Patients</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var patient in Model)
+    {
+        <tr>
+            <td>@patient.Name</td>
+            <td>@patient.Age</td>
+            <td>@patient.Gender</td>
+            <td>@patient.Phone</td>
+            <td>
+                <a href="@Url.Action("Details", "Patient", new { id = patient.PatientId })">Details</a> |
+                <a href="@Url.Action("Edit", "Patient", new { id = patient.PatientId })">Edit</a> |
+                <a href="@Url.Action("Delete", "Patient", new { id = patient.PatientId })">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
 
-            <button type="submit">Upload Painting</button>
-        </form>
-
-        @if (ViewBag.Message != null)
-        {
-            <div class="message">
-                <p>@ViewBag.Message</p>
-            </div>
-        }
-    </div>
-</body>
-</html>
